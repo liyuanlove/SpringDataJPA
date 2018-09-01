@@ -19,9 +19,7 @@ import org.springframework.data.repository.query.Param;
  * 2.查询方法以find/read/get开头；
  * 3.涉及条件查询时，条件的属性用条件关键字连接；
  * 4.要注意的是：条件属性以首字母大写；
- * 5.支持属性的级联查询：
- * 1).若当前类有符合条件的属性，则优先使用，而不使用级联属性；
- * 2).若需要使用级联属性，则属性之间使用“_”进行连接。
+ * 5.支持属性的级联查询：1).若当前类有符合条件的属性，则优先使用，而不使用级联属性；2).若需要使用级联属性，则属性之间使用“_”进行连接。
  */
 //@RepositoryDefinition(domainClass=Person.class,idClass=Integer.class)
 public interface PersonRepsotory extends JpaRepository<Person, Integer>, JpaSpecificationExecutor<Person>, PersonDao {
